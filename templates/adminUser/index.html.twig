@@ -1,0 +1,46 @@
+{% extends 'baseBack.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+
+
+    <div class="form-outline mb-4">
+  
+  
+   
+
+    </div>
+   
+
+
+<table  class="table table-striped">
+<tr >
+<th>EmailEtudiant </th>
+<th>EcolePartanaire </th>
+<th>Departement</th>
+<th>MoyenneG3eme</th>
+<th>MoyenneG4eme</th>
+<th>score </th>
+<th>etat </th>
+
+</tr>
+
+{% for i in em %}
+<tr>
+<td> {{i.EmailEtudiant}} </td>
+<td> {{i.EcoleP}} </td>
+<td> {{i.Departement}} </td>
+<td> {{i.MoyenneG3eme}} </td>
+<td> {{i.MoyenneG4eme}} </td>
+<td> {{i.score }} </td>
+<td> {{i.etat }} </td>
+
+
+
+</tr>
+{% endfor %}
+
+
+</table>
+{% endblock %}

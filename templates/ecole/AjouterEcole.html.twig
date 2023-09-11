@@ -1,0 +1,38 @@
+{% extends 'baseBack.html.twig' %}
+
+{% block title %}Ajouter EcolePartanaire{% endblock %}
+
+{% block body %}
+{{ form_start(form,{'attr': {'novalidate':'novalidate'}}) }}
+<section >
+
+      
+        <div class="card" style="border-radius: 1rem; margin-left: 220px;">
+          
+            <div >
+              <img src="{{asset('img/74.jpg')}}"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; margin-top: 100px;
+                margin-left: 120px;" />
+            </div>
+          
+              <div class="card-body p-4 p-lg-5 text-black">
+              <form class="container">
+              <h1>Ajouter un Ecole Partanaire</h1>
+
+             {{ form_row(form.email, { 'attr': {  'placeholder': 'Adresse email...' } }  ) }}
+             {{ form_row(form.nom, { 'attr': {  'placeholder': 'Nom d"ecole..' } }  ) }}
+ {{ form_row(form.description, { 'label':'Description ...',
+                                      'attr':{'placeholder':'donner votre description...' } }) }} 
+ {{ form_row(form.image, { 'label':'image ...',
+                                      'attr':{'placeholder':'donner l"image ...' } }) }} 
+  <button type="submit" class="btn btn-success">Ajouter l'école</button>
+ {{ form_end(form) }}
+ </form>
+
+       
+      
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
